@@ -1,142 +1,209 @@
+import coffee1 from "@/assets/Latte1.png";
+import coffee2 from "@/assets/Americano.png";
+import coffee3 from "@/assets/UbeLattee.png";
+import coffee4 from "@/assets/Biscoff.png";
+import coffee5 from "@/assets/Dirtymatcha.png";
+import noncoffee1 from "@/assets/Choco.png";
+import noncoffee2 from "@/assets/WhiteChoco.png";
+import noncoffee3 from "@/assets/Matcha.png";
+import noncoffee4 from "@/assets/Honey.png";
+import noncoffee5 from "@/assets/UbeMatcha.png";
+import noncoffee6 from "@/assets/UbeMilk.png";
+import noncoffee7 from "@/assets/MatchaBerry.png";
+import noncoffee8 from "@/assets/GreenApple.png";
+import noncoffee9 from "@/assets/Peach.png";
+
 export interface MenuItem {
   id: string;
   name: string;
   description: string;
   price: number;
   category: "coffee" | "non-coffee" | "food";
-  image?: string;
+  images?: string[];
 }
 
 export const menuItems: MenuItem[] = [
-  // Coffee
+  // Coffee (Hot or Iced)
   {
-    id: "1",
-    name: "Bukid Signature Blend",
-    description: "Our house specialty - smooth, rich, with hints of chocolate and caramel",
-    price: 120,
-    category: "coffee",
-  },
-  {
-    id: "2",
-    name: "Barako Espresso",
-    description: "Bold Filipino coffee with a strong, distinctive flavor",
+    id: "c1",
+    name: "Americano",
+    description: "Straightforward and bold — espresso tamed with hot water. Serious caffeine, zero attitude.",
     price: 100,
     category: "coffee",
+    images: [coffee2],
   },
   {
-    id: "3",
-    name: "Café Latte",
-    description: "Creamy espresso with steamed milk and beautiful latte art",
-    price: 130,
+    id: "c2",
+    name: "Cafe Latte",
+    description: "Velvety steamed milk wrapped around a friendly shot of espresso. Comfort in a cup.",
+    price: 120,
     category: "coffee",
+    images: [coffee1],
   },
   {
-    id: "4",
-    name: "Cappuccino",
-    description: "Classic Italian coffee with equal parts espresso, steamed milk, and foam",
-    price: 130,
+    id: "c3",
+    name: "Spanish Latte",
+    description: "Sweet, creamy, and just a little cheeky — condensed milk gives this one its sunny personality.",
+    price: 140,
     category: "coffee",
+    images: [coffee1],
   },
   {
-    id: "5",
-    name: "Iced Americano",
-    description: "Refreshing cold coffee with bold espresso flavor",
-    price: 110,
+    id: "c4",
+    name: "Ube Latte",
+    description: "Filipino purple yam meets espresso — subtly sweet, delightfully nostalgic, and photo-ready.",
+    price: 140,
     category: "coffee",
+    images: [coffee3],
   },
   {
-    id: "6",
-    name: "Caramel Macchiato",
-    description: "Sweet and smooth with caramel drizzle",
-    price: 145,
+    id: "c5",
+    name: "White Mocha",
+    description: "Silky white chocolate folded into espresso — dessert disguised as a daytime drink.",
+    price: 140,
     category: "coffee",
+    images: [coffee1],
+  },
+  {
+    id: "c6",
+    name: "Caramel",
+    description: "Warm caramel notes and espresso — sticky-sweet without the sugar hangover.",
+    price: 140,
+    category: "coffee",
+    images: [coffee1],
+  },
+  {
+    id: "c7",
+    name: "Mocha",
+    description: "Chocolate and coffee in a harmonious argument — one always wins (your taste buds).",
+    price: 140,
+    category: "coffee",
+    images: [coffee1],
+  },
+  {
+    id: "c8",
+    name: "Hazelnut",
+    description: "Nutty, toasty, and smooth — like a little campfire chat in your cup.",
+    price: 140,
+    category: "coffee",
+    images: [coffee1],
+  },
+  {
+    id: "c9",
+    name: "French Vanilla",
+    description: "Classic vanilla with a touch of elegance — mellow, fragrant, and utterly dependable.",
+    price: 140,
+    category: "coffee",
+    images: [coffee1],
+  },
+  {
+    id: "c10",
+    name: "Sea Salt",
+    description: "Sweet meets savory — a salted finish that makes every sip linger longer.",
+    price: 150,
+    category: "coffee",
+    images: [coffee1],
+  },
+  {
+    id: "c11",
+    name: "Biscoff",
+    description: "Spiced cookie vibes blended into coffee — dangerously cozy and surprisingly grown-up.",
+    price: 150,
+    category: "coffee",
+    images: [coffee4],
+  },
+  {
+    id: "c12",
+    name: "Dirty Matcha",
+    description: "Earthy matcha with a cheeky shot of espresso — best of both worlds for the adventurous.",
+    price: 150,
+    category: "coffee",
+    images: [coffee5],
   },
 
   // Non-Coffee
   {
-    id: "7",
-    name: "Matcha Latte",
-    description: "Premium Japanese green tea with creamy milk",
-    price: 140,
-    category: "non-coffee",
-  },
-  {
-    id: "8",
-    name: "Tsokolate de Batirol",
-    description: "Traditional Filipino hot chocolate, thick and rich",
-    price: 135,
-    category: "non-coffee",
-  },
-  {
-    id: "9",
-    name: "Honey Lemon Tea",
-    description: "Soothing and refreshing, perfect for any time",
-    price: 95,
-    category: "non-coffee",
-  },
-  {
-    id: "10",
-    name: "Mango Smoothie",
-    description: "Fresh Philippine mangoes blended to perfection",
+    id: "n1",
+    name: "Chocolate Milk",
+    description: "Creamy, chocolatey, and very easy to love — childhood nostalgia in a grown-up glass.",
     price: 125,
     category: "non-coffee",
+    images: [noncoffee1],
   },
   {
-    id: "11",
-    name: "Fresh Buko Juice",
-    description: "Straight from young coconuts, naturally sweet and refreshing",
-    price: 85,
+    id: "n2",
+    name: "White Chocolate Milk",
+    description: "Bright, sweet white chocolate folded into milk — a soft and indulgent hug.",
+    price: 125,
     category: "non-coffee",
+    images: [noncoffee2],
+  },
+  {
+    id: "n3",
+    name: "Matcha Green Tea",
+    description: "Ceremony-ready matcha energy — grassy, vibrant, and surprisingly zen.",
+    price: 140,
+    category: "non-coffee",
+    images: [noncoffee3],
+  },
+  {
+    id: "n4",
+    name: "Honey Ginger Tea",
+    description: "Warm, soothing, and gently zippy — a tiny wellness ritual in a cup.",
+    price: 120,
+    category: "non-coffee",
+    images: [noncoffee4],
+  },
+  {
+    id: "n5",
+    name: "Ube Matcha",
+    description: "A playful mash-up: purple yam sweetness meets matcha's green backbone. Surprisingly balanced.",
+    price: 150,
+    category: "non-coffee",
+    images: [noncoffee5],
+  },
+  {
+    id: "n6",
+    name: "Ube Milk",
+    description: "Velvety milk with the gentle sweetness of ube — like a Filipino bakery visit in liquid form.",
+    price: 140,
+    category: "non-coffee",
+    images: [noncoffee6],
+  },
+  {
+    id: "n7",
+    name: "Matcha Berry",
+    description: "Bright berries with earthy matcha — fruity, fresh, and a little bit fancy.",
+    price: 150,
+    category: "non-coffee",
+    images: [noncoffee7],
   },
 
-  // Food
+  // Fruit Coolers (treated as non-coffee)
   {
-    id: "12",
-    name: "Ensaymada",
-    description: "Soft, buttery Filipino pastry topped with cheese and sugar",
-    price: 65,
-    category: "food",
-  },
-  {
-    id: "13",
-    name: "Pan de Sal Sandwich",
-    description: "Classic Filipino bread roll with cheese, egg, or ham",
-    price: 80,
-    category: "food",
-  },
-  {
-    id: "14",
-    name: "Banana Bread",
-    description: "Moist, homemade with local Saba bananas",
-    price: 75,
-    category: "food",
-  },
-  {
-    id: "15",
-    name: "Bibingka",
-    description: "Traditional rice cake with salted egg and cheese",
-    price: 90,
-    category: "food",
-  },
-  {
-    id: "16",
-    name: "Chicken Pesto Pasta",
-    description: "Creamy basil pesto with grilled chicken",
-    price: 180,
-    category: "food",
-  },
-  {
-    id: "17",
-    name: "Club Sandwich",
-    description: "Triple-decker with chicken, bacon, lettuce, and tomatoes",
-    price: 165,
-    category: "food",
-  },
-  {
-    id: "18",
-    name: "Ube Cheesecake",
-    description: "Filipino purple yam meets creamy cheesecake",
+    id: "f1",
+    name: "Green Apple",
+    description: "Tart and refreshing — like a crisp orchard breeze in a glass.",
     price: 120,
+    category: "non-coffee",
+    images: [noncoffee8],
+  },
+  {
+    id: "f2",
+    name: "Peach Apple Garden",
+    description: "Peachy sweetness meets apple brightness — a summer picnic without the ants.",
+    price: 120,
+    category: "non-coffee",
+    images: [noncoffee9],
+  },
+
+  // Special / Dessert
+  {
+    id: "s1",
+    name: "Affogato",
+    description: "A single scoop of vanilla drowned in hot espresso — dessert and caffeine finally agree.",
+    price: 160,
     category: "food",
+    images: [coffee2],
   },
 ];

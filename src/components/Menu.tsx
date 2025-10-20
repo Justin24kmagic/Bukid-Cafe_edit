@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Coffee, Leaf, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { menuItems, MenuItem } from "@/data/menuData";
-import coffee1 from "@/assets/coffee-1.jpg";
+
 
 const Menu = () => {
   const [filter, setFilter] = useState<"all" | "coffee" | "non-coffee" | "food">("all");
 
-  const filteredItems = filter === "all" 
-    ? menuItems 
+  const filteredItems = filter === "all"
+    ? menuItems
     : menuItems.filter(item => item.category === filter);
+
+  // Show items incrementally: start with PREVIEW_COUNT, load more on each click
+  const PREVIEW_COUNT = 6;
+  const [visibleCount, setVisibleCount] = useState(PREVIEW_COUNT);
+  const displayItems = filteredItems.slice(0, visibleCount);
+
+  // Reset visible count when filter changes
+  useEffect(() => {
+    setVisibleCount(PREVIEW_COUNT);
+  }, [filter]);
 
   const categories = [
     { id: "all", name: "All Items", icon: UtensilsCrossed },
@@ -50,15 +60,15 @@ const Menu = () => {
 
         {/* Menu Items Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item, index) => (
+          {displayItems.map((item, index) => (
             <div
               key={item.id}
               className="bg-card rounded-xl shadow-card hover:shadow-hover transition-all hover-lift overflow-hidden animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="h-48 bg-gradient-to-br from-accent to-cream flex items-center justify-center overflow-hidden">
-                <img 
-                  src={coffee1} 
+                <img
+                  src={item.images && item.images.length > 0 ? item.images[0] : "/placeholder.png"}
                   alt={item.name}
                   className="w-full h-full object-cover"
                 />
@@ -88,6 +98,19 @@ const Menu = () => {
             </div>
           ))}
         </div>
+
+        {/* See more button */}
+        {filteredItems.length > visibleCount && (
+          <div className="mt-8 flex justify-center">
+            <button
+              onClick={() => setVisibleCount((c) => Math.min(filteredItems.length, c + PREVIEW_COUNT))}
+              className="text-muted-foreground/80 hover:text-muted-foreground/100 transition-colors text-sm px-4 py-2 rounded-md"
+              aria-expanded={visibleCount >= filteredItems.length}
+            >
+              {`See more (${Math.min(PREVIEW_COUNT, filteredItems.length - visibleCount)})`}
+            </button>
+          </div>
+        )}
 
         {filteredItems.length === 0 && (
           <div className="text-center py-12">

@@ -1,6 +1,6 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-cafe.jpg";
+import heroImage from "@/assets/Bukid_bg.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="animate-fade-in-up">
           <h1 className="font-display font-bold text-5xl md:text-7xl text-primary-foreground mb-6">
-            Welcome to <span className="text-cream">Bukid Café</span>
+            Welcome to <span className="text-cream">Bukid Cafe</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 max-w-2xl mx-auto">
@@ -37,7 +37,7 @@ const Hero = () => {
           
           <div className="flex items-center justify-center gap-2 text-primary-foreground/80 mb-8">
             <MapPin className="h-5 w-5" />
-            <span className="text-lg">Morong, Rizal, Philippines</span>
+            <span className="text-lg">Morong Rizal, Philippines</span>
           </div>
 
           <p className="text-lg text-primary-foreground/90 mb-12 max-w-3xl mx-auto">
@@ -57,9 +57,8 @@ const Hero = () => {
             
             <Button
               size="lg"
-              variant="outline"
               onClick={() => scrollToSection("#contact")}
-              className="border-2 border-cream text-cream hover:bg-cream hover:text-primary"
+              className="bg-black/80 text-cream hover:bg-black/90 shadow-hover border-2 border-transparent"
             >
               Visit Us
             </Button>
@@ -75,12 +74,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-float">
-        <div className="w-6 h-10 border-2 border-cream rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-cream rounded-full animate-bounce" />
-        </div>
-      </div>
+
     </section>
   );
 };

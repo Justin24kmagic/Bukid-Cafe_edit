@@ -20,20 +20,27 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-foreground/80">
               <p>
-                Bukid Café started as a simple dream: to bring the warmth and tranquility 
-                of Philippine countryside living to a cozy coffee shop experience. 
-                Inspired by the lush farms ("bukid") of Morong, Rizal, we wanted to create 
-                a space where nature and community come together over exceptional coffee.
+                Bukid Cafe began as more than just a dream — it was a response to a longing. 
+                In 2022, when the world was still healing from the pandemic and many were weary 
+                of being indoors, our family envisioned a place where people could reconnect 
+                with nature, community, and themselves. One of us had always loved coffee shops, 
+                especially those inspired by the outdoors, and we wanted to bring that same 
+                refreshing experience closer to home.
               </p>
               <p>
-                What began as a small local café has grown into a beloved gathering spot 
-                for coffee lovers, students, remote workers, and families seeking good vibes 
-                and great flavors. Our commitment to quality, local sourcing, and sustainable 
-                practices reflects our deep connection to the land and people of Rizal.
+                Nestled in the fresh, open landscapes of Morong, Rizal, we built Bukid Cafe 
+                as a space where locals and visitors alike could breathe in the crisp air, 
+                savor the best coffee in town, and feel the warmth of genuine hospitality. 
+                What started as a simple idea quickly grew into a community — a gathering 
+                place for coffee lovers, students, remote workers, families, and friends 
+                seeking both comfort and inspiration.
               </p>
               <p>
-                Today, we're not just a café — we're a community hub where stories are shared, 
-                friendships are made, and every cup is brewed with care and passion.
+                From the very beginning, we’ve been committed to more than just serving coffee. 
+                We strive to provide the best service, the most inviting scenery, and a natural 
+                environment that reflects the beauty of the Philippine countryside. Every cup 
+                we brew carries with it our passion, our story, and our promise to keep 
+                nurturing this community we’ve built together.
               </p>
             </div>
           </div>
@@ -98,7 +105,7 @@ const About = () => {
           </h3>
           <p className="text-lg max-w-3xl mx-auto opacity-90">
             We believe in the power of good food, great coffee, and genuine connections. 
-            Every visit to Bukid Café is an invitation to slow down, savor the moment, 
+            Every visit to Bukid Cafe is an invitation to slow down, savor the moment, 
             and enjoy life's simple pleasures — just like in the countryside.
           </p>
         </div>
