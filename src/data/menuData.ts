@@ -12,6 +12,27 @@ import noncoffee6 from "@/assets/UbeMilk.png";
 import noncoffee7 from "@/assets/MatchaBerry.png";
 import noncoffee8 from "@/assets/GreenApple.png";
 import noncoffee9 from "@/assets/Peach.png";
+import Food1 from "@/assets/Afogato.jpg";
+import Food2 from "@/assets/BeefSpaghetti.jpg";
+import Food3 from "@/assets/Carbonara.jpg";
+import Food4 from "@/assets/Pesto.jpeg";
+// import Food1 from "@/assets/Food1.png";
+import Food6 from "@/assets/pepperoni.jpg";
+import Food7 from "@/assets/Spinach.jpg";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+// import Food1 from "@/assets/Food1.png";
+
+
 
 export interface MenuItem {
   id: string;
@@ -204,6 +225,227 @@ export const menuItems: MenuItem[] = [
     description: "A single scoop of vanilla drowned in hot espresso — dessert and caffeine finally agree.",
     price: 160,
     category: "food",
-    images: [coffee2],
+    images: [Food1],
   },
+
+  {
+  id: "p1",
+  name: "Beef Spaghetti",
+  description: "Savory ground beef in sweet Filipino-style tomato sauce over al dente spaghetti.",
+  price: 220,
+  category: "food",
+  images: [Food2],
+},
+{
+  id: "p2",
+  name: "Classic Carbonara",
+  description: "Creamy white sauce with bacon bits and parmesan — a timeless comfort dish.",
+  price: 230,
+  category: "food",
+  images: [Food3],
+},
+{
+  id: "p3",
+  name: "Chicken Pesto",
+  description: "Grilled chicken tossed in fragrant basil pesto over pasta, light and flavorful.",
+  price: 200,
+  category: "food",
+  images: [Food4],
+},
+{
+  id: "pi1",
+  name: "Margherita",
+  description: "Simple and fresh — tomato, mozzarella, and basil on a crisp thin crust.",
+  price: 180,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "pi2",
+  name: "Pepperoni",
+  description: "Classic pepperoni slices over gooey cheese and tangy tomato sauce.",
+  price: 200,
+  category: "food",
+  images: [Food6],
+},
+{
+  id: "pi3",
+  name: "3 Cheese Spinach",
+  description: "A rich blend of cheeses with sautéed spinach — indulgent and earthy.",
+  price: 230,
+  category: "food",
+  images: [Food7],
+},
+{
+  id: "sn1",
+  name: "Burger Beef Load",
+  description: "Juicy beef patty stacked with fresh veggies and signature sauce.",
+  price: 180,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "sn2",
+  name: "Burger Chicken Load",
+  description: "Crispy chicken fillet in a toasted bun with creamy dressing.",
+  price: 170,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "sn3",
+  name: "Grilled Cheese Sandwich",
+  description: "Golden grilled bread with melted cheese — simple and satisfying.",
+  price: 150,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "sn4",
+  name: "Beef Nachos",
+  description: "Loaded nachos with seasoned beef, cheese, and salsa.",
+  price: 190,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "sn5",
+  name: "Chips N’ Cheese",
+  description: "Crispy chips served with warm, gooey cheese dip.",
+  price: 150,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "sn6",
+  name: "Fish N’ Fries",
+  description: "Crispy fish fillet paired with golden fries and tartar sauce.",
+  price: 180,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "sn7",
+  name: "Wedge Fries",
+  description: "Seasoned potato wedges, crispy outside and fluffy inside.",
+  price: 100,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "rm1",
+  name: "Beef Tapa w/ Egg",
+  description: "Tender beef tapa served with garlic rice and sunny-side egg.",
+  price: 180,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "rm2",
+  name: "Hungarian Sausage",
+  description: "Smoky Hungarian sausage with rice and egg — bold and hearty.",
+  price: 170,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "rm3",
+  name: "Pork Sisig (200g w/ egg)",
+  description: "Sizzling pork sisig with egg — crunchy, savory, and satisfying.",
+  price: 200,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "rm4",
+  name: "Bagnet",
+  description: "Crispy Ilocano-style pork belly served with rice and dipping sauce.",
+  price: 200,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "rm5",
+  name: "Bangus",
+  description: "Fried milkfish fillet with rice and egg — a Filipino classic.",
+  price: 170,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "rm6",
+  name: "Burger Steak Delight",
+  description: "Savory burger patties in your choice of Classic, Garlic Parmesan, or Buffalo sauce.",
+  price: 180,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "ac1",
+  name: "Pork Sisig (200g no egg)",
+  description: "Crunchy pork sisig served solo — bold flavor, no frills.",
+  price: 170,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "ac2",
+  name: "Bagnet (2 flavors only)",
+  description: "Double-flavored crispy pork belly — indulgent and crunchy.",
+  price: 270,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "ac3",
+  name: "Chicken Wings Platter",
+  description: "6 wings in your chosen flavor with fries — perfect for sharing.",
+  price: 290,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "d1",
+  name: "Banana Bread",
+  description: "Moist and comforting banana loaf with a hint of cinnamon.",
+  price: 90,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "d2",
+  name: "Chocolate Cake",
+  description: "Rich, fudgy chocolate cake — a sweet indulgence.",
+  price: 120,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "d3",
+  name: "Blueberry Cheesecake",
+  description: "Creamy cheesecake topped with sweet blueberry compote.",
+  price: 150,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "d4",
+  name: "Cheesecake",
+  description: "Classic New York-style cheesecake — smooth and tangy.",
+  price: 150,
+  category: "food",
+  images: [Food1],
+},
+{
+  id: "d5",
+  name: "Waffle Ice Cream",
+  description: "Warm waffle topped with a scoop of ice cream — hot meets cold.",
+  price: 150,
+  category: "food",
+  images: [Food1],
+},
+
 ];
+
+
+

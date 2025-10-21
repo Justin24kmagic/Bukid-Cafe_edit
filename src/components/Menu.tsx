@@ -11,7 +11,7 @@ const Menu = () => {
     ? menuItems
     : menuItems.filter(item => item.category === filter);
 
-  // Show items incrementally: start with PREVIEW_COUNT, load more on each click
+  // Show items incrementally: start with PREVIEW_COUNT, shpow all on button click
   const PREVIEW_COUNT = 6;
   const [visibleCount, setVisibleCount] = useState(PREVIEW_COUNT);
   const displayItems = filteredItems.slice(0, visibleCount);
@@ -100,18 +100,18 @@ const Menu = () => {
         </div>
 
         {/* See more button */}
-        {filteredItems.length > visibleCount && (
-          <div className="mt-8 flex justify-center">
-            <button
-              onClick={() => setVisibleCount((c) => Math.min(filteredItems.length, c + PREVIEW_COUNT))}
-              className="text-muted-foreground/80 hover:text-muted-foreground/100 transition-colors text-sm px-4 py-2 rounded-md"
-              aria-expanded={visibleCount >= filteredItems.length}
-            >
-              {`See more (${Math.min(PREVIEW_COUNT, filteredItems.length - visibleCount)})`}
-            </button>
-          </div>
-        )}
-
+          {filteredItems.length > visibleCount && (
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={() => setVisibleCount(() => Math.min(filteredItems.length))}
+                className="text-muted-foreground/80 hover:text-muted-foreground/100 transition-colors text-sm px-4 py-2 rounded-md"
+                aria-expanded={visibleCount >= filteredItems.length}
+              >
+                Show all items
+              </button>
+            </div>
+          )}
+        
         {filteredItems.length === 0 && (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
