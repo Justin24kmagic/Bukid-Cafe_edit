@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import coffeeCart from "@/assets/coffee-cart.jpg";
+import emailjs from "@emailjs/browser";
 
 const Events = () => {
   const { toast } = useToast();
@@ -21,7 +22,7 @@ const Events = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Basic validation
     if (!formData.name || !formData.email || !formData.eventDate) {
       toast({
@@ -32,26 +33,55 @@ const Events = () => {
       return;
     }
 
-    // Show success message
-    toast({
-      title: "Booking Request Sent! ☕",
-      description: "We'll contact you soon to confirm your coffee cart booking.",
-    });
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      eventDate: "",
-      eventType: "",
-      location: "",
-      guests: "",
-      message: "",
-    });
+    // 🔹 Send email via EmailJS
+    emailjs
+      .send(
+        "service_tshsp7u", // Replace with your actual EmailJS Service ID
+        "template_nqa1dfe", // Replace with your EmailJS Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          eventDate: formData.eventDate,
+          eventType: formData.eventType,
+          location: formData.location,
+          guests: formData.guests,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        "GI1ujNhxE-hxHPJKw" // Replace with your EmailJS Public Key
+      )
+      .then(() => {
+        toast({
+          title: "Booking Request Sent! ☕",
+          description:
+            "We'll contact you soon to confirm your coffee cart booking.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          eventDate: "",
+          eventType: "",
+          location: "",
+          guests: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        toast({
+          title: "Error Sending Message",
+          description: "Please try again or contact us directly.",
+          variant: "destructive",
+        });
+      });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -66,17 +96,17 @@ const Events = () => {
             Mobile Coffee Cart
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Bring the Bukid Café experience to your event! 
-            Perfect for weddings, corporate events, parties, and more.
+            Bring the Bukid Café experience to your event! Perfect for weddings,
+            corporate events, parties, and more.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image & Features */}
+          {/* Left: Image and Features */}
           <div className="animate-fade-in">
             <div className="rounded-2xl overflow-hidden shadow-card mb-8">
-              <img 
-                src={coffeeCart} 
+              <img
+                src={coffeeCart}
                 alt="Bukid Café Mobile Coffee Cart"
                 className="w-full h-96 object-cover"
               />
@@ -92,7 +122,8 @@ const Events = () => {
                     Specialty Coffee Bar
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    Full espresso bar with our signature drinks and barista service
+                    Full espresso bar with our signature drinks and barista
+                    service
                   </p>
                 </div>
               </div>
@@ -106,7 +137,8 @@ const Events = () => {
                     Customizable Packages
                   </h4>
                   <p className="text-muted-foreground text-sm">
-                    Tailored menu and setup to match your event theme and guest count
+                    Tailored menu and setup to match your event theme and guest
+                    count
                   </p>
                 </div>
               </div>
@@ -127,7 +159,7 @@ const Events = () => {
             </div>
           </div>
 
-          {/* Booking Form */}
+          {/* Right: Booking Form */}
           <div className="animate-scale-in">
             <div className="bg-card rounded-2xl shadow-card p-8">
               <h3 className="font-display font-bold text-2xl text-primary mb-6">
@@ -242,8 +274,8 @@ const Events = () => {
                   />
                 </div>
 
-                <Button 
-                  type="submit" 
+                <Button
+                  type="submit"
                   className="w-full bg-secondary hover:bg-secondary/90 gap-2"
                   size="lg"
                 >

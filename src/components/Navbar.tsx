@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Menu", href: "#menu" },
+    { name: "Wheel Of Bukid", href: "#SpinWheel" },
     { name: "Events", href: "#events" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
