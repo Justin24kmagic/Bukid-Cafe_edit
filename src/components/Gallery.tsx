@@ -1,15 +1,21 @@
-import heroImage from "@/assets/hero-cafe.jpg";
-import coffee1 from "@/assets/coffee-1.jpg";
-import coffeeCart from "@/assets/coffee-cart.jpg";
+import Img1 from "@/assets/Scenery_bukid.jpg";
+import Img2 from "@/assets/Latte_art.jpg";
+import Img3 from "@/assets/Coffee_cart1.jpg";
+import Img4 from "@/assets/customer_enjoy.jpg";
+import Img5 from "@/assets/Bukid_cafe_emp.jpg";
+import Img6 from "@/assets/Bukid_interior.jpg";
+
 
 const Gallery = () => {
   const images = [
-    { src: heroImage, alt: "Bukid Café cozy interior with natural lighting" },
-    { src: coffee1, alt: "Beautiful latte art coffee" },
-    { src: coffeeCart, alt: "Mobile coffee cart at outdoor event" },
-    { src: heroImage, alt: "Customers enjoying coffee" },
-    { src: coffee1, alt: "Specialty drinks" },
-    { src: coffeeCart, alt: "Coffee cart setup" },
+    { src: Img1, alt: "Bukid Cafe's alfresco vibes" },
+    { src: Img2, alt: "Beautiful latte art with a side of creamy chocolate cake" },
+    { src: Img3, alt: "Mobile coffee cart at outdoor event" },
+    { src: Img4, alt: "Customers enjoying coffee" },
+    { src: Img5, alt: "Lovely Staff at Bukid Café" },
+    { src: Img6, alt: "Bukid Cafe cozy interior with natural lighting" },
+   
+   
   ];
 
   return (
@@ -20,7 +26,7 @@ const Gallery = () => {
             Gallery
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A glimpse into the Bukid Café experience - nature, coffee, and good vibes
+            A glimpse into the Bukid Cafe experience - nature, coffee, and good vibes
           </p>
         </div>
 
@@ -53,7 +59,7 @@ const Gallery = () => {
             Share Your Moments
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Tag us on social media <span className="font-semibold text-secondary">@BukidCafe</span> to be featured in our gallery!
+            Tag us <span className="font-semibold text-secondary">@BukidCafe</span> to be featured in our social media galleries!
             We love seeing you enjoy our coffee and cozy space. 📸☕
           </p>
         </div>

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import coffeeCart from "@/assets/coffee-cart.jpg";
+import coffeeCart from "@/assets/Coffee_cart.jpg";
 import emailjs from "@emailjs/browser";
 
 const Events = () => {
@@ -96,7 +96,7 @@ const Events = () => {
             Mobile Coffee Cart
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Bring the Bukid Café experience to your event! Perfect for weddings,
+            Bring the Bukid Cafe experience to your event! Perfect for weddings,
             corporate events, parties, and more.
           </p>
         </div>

@@ -10,7 +10,7 @@ const Contact = () => {
             Visit Us
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Come experience the warmth of Bukid Café. We're always happy to see you!
+            Come experience the warmth of Bukid Cafe. We're always happy to see you!
           </p>
         </div>
 
@@ -27,7 +27,7 @@ const Contact = () => {
                     Location
                   </h3>
                   <p className="text-muted-foreground">
-                    123 Countryside Road<br />
+                    Bukid Cafe, G. San Antonio Street,<br />
                     Morong, Rizal 1960<br />
                     Philippines
                   </p>
@@ -45,8 +45,8 @@ const Contact = () => {
                     Opening Hours
                   </h3>
                   <div className="text-muted-foreground space-y-1">
-                    <p>Monday - Friday: 7:00 AM - 9:00 PM</p>
-                    <p>Saturday - Sunday: 8:00 AM - 10:00 PM</p>
+                    <p>Monday - Friday: 11:00 AM - 8:00 PM</p>
+                    <p>Saturday - Sunday: 7:00 AM - 9:00 PM</p>
                     <p className="text-secondary font-medium mt-2">Open Daily!</p>
                   </div>
                 </div>
@@ -63,8 +63,7 @@ const Contact = () => {
                     Contact
                   </h3>
                   <div className="text-muted-foreground space-y-1">
-                    <p>Phone: +63 917 123 4567</p>
-                    <p>Email: hello@bukidcafe.ph</p>
+                    <p>Email: bukidcafe22@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -83,7 +82,7 @@ const Contact = () => {
                     <Button
                       variant="outline"
                       className="justify-start gap-2"
-                      onClick={() => window.open("https://facebook.com", "_blank")}
+                      onClick={() => window.open("https://www.facebook.com/bukidcafe", "_blank")}
                     >
                       <Facebook className="h-4 w-4" />
                       Follow on Facebook
@@ -91,7 +90,7 @@ const Contact = () => {
                     <Button
                       variant="outline"
                       className="justify-start gap-2"
-                      onClick={() => window.open("https://google.com/maps", "_blank")}
+                      onClick={() => window.open("https://www.google.com/search?sca_esv=3f626f5782a50780&rlz=1C1ONGR_enPH1040PH1040&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E1UNKYr2C7PsI_48I_RpAo-hMFi-Glq5SW-SUiEQIJe61NqjHL6M9kii-DZFZxp9NufhYCI55mIAjWopMt2oG9nCeyMD&q=Bukid+Cafe+Reviews&sa=X&ved=2ahUKEwiso7_SxueQAxXKqVYBHcTYFO0Q0bkNegQIIRAD&biw=1707&bih=811&dpr=1.13", "_blank")}
                     >
                       <Star className="h-4 w-4" />
                       Leave a Review on Google
@@ -106,7 +105,7 @@ const Contact = () => {
           <div className="animate-scale-in">
             <div className="bg-card rounded-xl overflow-hidden shadow-card h-full min-h-[500px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d246646.46352289262!2d121.17824765!3d14.572523850000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7a82a5c0f6d%3A0x5a3a3c6c7c8c7c8c!2sMorong%2C%20Rizal!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.5517108479903!2d121.2084318751044!3d14.510405185965327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c1806f9f3f05%3A0x6ee7ae7ae8dfcb36!2sBukid%20Cafe!5e0!3m2!1sen!2sph!4v1762776193990!5m2!1sen!2sph"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -126,7 +125,7 @@ const Contact = () => {
           </h3>
           <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
             Whether it's your morning coffee, an afternoon break, or an evening hangout - 
-            Bukid Café is your home away from home.
+            Bukid Cafe is your home away from home.
           </p>
           <p className="text-2xl font-display font-semibold">
             See you soon! ☕🌿
