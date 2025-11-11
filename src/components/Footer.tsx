@@ -25,6 +25,7 @@ const Footer = () => {
               <li><a href="#home" className="hover:text-cream transition-colors">Home</a></li>
               <li><a href="#about" className="hover:text-cream transition-colors">About</a></li>
               <li><a href="#menu" className="hover:text-cream transition-colors">Menu</a></li>
+              <li><a href="#SpinWheel" className="hover:text-cream transition-colors">Wheel of Bukid</a></li>
               <li><a href="#events" className="hover:text-cream transition-colors">Events</a></li>
               <li><a href="#contact" className="hover:text-cream transition-colors">Contact</a></li>
             </ul>
@@ -35,16 +36,14 @@ const Footer = () => {
             <h3 className="font-display font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2 text-sm opacity-90">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4" />
-                +63 917 123 4567
-              </li>
-              <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                hello@bukidcafe.ph
+                bukidcafe22@gmail.com
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-1" />
-                <span>123 Countryside Road<br />Morong, Rizal 1960</span>
+                <span>Bukid Cafe, G. San Antonio Street,<br />
+                    Morong, Rizal 1960<br />
+                    Philippines</span>
               </li>
             </ul>
           </div>
@@ -53,8 +52,8 @@ const Footer = () => {
           <div>
             <h3 className="font-display font-semibold text-lg mb-4">Opening Hours</h3>
             <ul className="space-y-2 text-sm opacity-90">
-              <li>Monday - Friday:<br />7:00 AM - 9:00 PM</li>
-              <li>Saturday - Sunday:<br />8:00 AM - 10:00 PM</li>
+              <li>Monday - Friday:<br />11:00 AM - 8:00 PM</li>
+              <li>Saturday - Sunday:<br />7:00 AM - 9:00 PM</li>
               <li className="text-cream font-medium">Open Daily!</li>
             </ul>
           </div>
@@ -68,7 +67,7 @@ const Footer = () => {
           
           <div className="flex items-center gap-4">
             <a 
-              href="https://facebook.com" 
+              href="https://www.facebook.com/bukidcafe" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-cream transition-colors"
