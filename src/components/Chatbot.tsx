@@ -18,19 +18,85 @@ const intents = [
       "pagkain", "inom", "inumin", "kape", "tsaa", "milk tea"
     ],
     response:
-      "We serve specialty coffee, frappes, non-coffee drinks, and Filipino-inspired meals. ☕ Maaari mo ring tignan ang buong menu sa Menu page namin!",
+      "We serve the tastiest coffee, frappes, non-coffee drinks, and Filipino-inspired meals. ☕ Maaari mo ring tignan ang buong menu sa Menu page namin!",
+  },
+  
+  {
+  id: "greeting",
+  keywords: [
+    "hi", "hello", "hey", "greetings", "kumusta", "kamusta", "hoy", "oy", "hey",
+    "good morning", "good afternoon", "good evening", "magandang araw", "magandang umaga",
+    "magandang hapon", "magandang gabi"
+  ],
+    response: () => {
+      const greetings = [
+        "Hi, Ka-bukid! Kung kape ka, ikaw ‘yung tipo na hindi ko kayang iwan—strong, warm, at laging comforting. Swipe mo na ang menu, baka ito na ang simula ng brewing love story natin.",
+        "Hello, Ka-bukid! Kung iniwan ka ng ex mo, don’t worry—may kape kaming mas strong, mas loyal, at mas masarap. Tara, hanap tayo ng bagong ‘kapeng mahal’ sa menu.",
+        "Hey there, Ka-bukid! Our coffee’s like a good relationship—hot, sweet, and never bitter (unless gusto mo ng black). Silipin mo ang menu, baka ma-in love ka sa first sip.",
+        "Well hello there, Ka-bukid! ☕ Ready to sip, snack, and smile? 😄 Whether it's a chill frappe, a bold brew, or a hearty Filipino bite, we've got your cravings covered. Tara, usap tayo sa menu!"
+      ];
+      const index = Math.floor(Math.random() * greetings.length);
+      return greetings[index];
+    }
+  },
+  {
+  id: "about-bukid",
+  keywords: [
+    "what is bukid cafe", "bukid cafe", "how did it start", 
+    "kwento ng bukid", "origin", "story", "about bukid"
+  ],
+  response: `
+    Bukid Café is an alfresco coffee spot located in Morong, Rizal — cozy, breezy, and perfect for anyone who loves a relaxed probinsya vibe. 🌾  
+    Gusto mo malaman kung paano nagsimula ang Bukid?  
+    Click here to visit our <a href="#about" class="text-blue-500 underline">About Section</a>.
+  `,
+  },
+  {
+  id: "wheel-info",
+  keywords: [
+    "what is wheel of bukid", "wheel of bukid", "bukid wheel", 
+    "spin wheel", "menu wheel", "surprise wheel"
+  ],
+  response: `
+    The Wheel of Bukid is our fun little randomizer! 🎡  
+    If you can’t decide what to order, pihitin mo lang — and it will pick a drink or meal for you.  
+    Want to try it?  
+    Tap here to jump to the <a href="#SpinWheel" class="text-blue-500 underline">Wheel of Bukid Section</a>.
+  `,
+  },
+  {
+  id: "reviews",
+  keywords: [
+    "review", "reviews", "feedback", "comment", "google review", 
+    "rate", "rating", "testimonial", "evaluation"
+  ],
+  response: `
+    We’d love to hear from you! ⭐  
+    You can leave a review directly on our website — scroll down here:  
+    <a href="#reviews" class="text-blue-500 underline">Review Section</a>  
+    or leave a Google Review by tapping here:  
+    <a href="#contact" class="text-blue-500 underline">Google Reviews Link</a>.
+    `,
   },
   {
     id: "hours",
-    keywords: ["time", "hour", "open", "close", "opening", "closing", "oras", "bukás", "sarado"],
+    keywords: ["time", "hour", "open", "close", "opening", "closing", "oras", "bukas", "sarado"],
     response:
-      "Our shop is open Monday–Friday 7AM–9PM and Saturday–Sunday 8AM–10PM. ⏰ Bukas kami everyday para sa iyong kape fix!",
+      "Our shop is open Monday–Friday 11AM–8PM and Saturday–Sunday 7AM–9PM. ⏰ Bukas kami everyday para sa iyong kape fix!",
+  },
+  {
+    id: "randomizer",
+    keywords: [
+      "recommend", "suggest", "ano masarap", "anong masarap", "best seller", "order", "pick", "try", "wheel", "gusto", "reco", "recommendation", "ano masarap sa menu", "ano ang masarap", "ano ang pwede", "ano ang dapat tikman"
+    ],
+    response:
+      "Looking for something new to try? 🎯 Spin the Wheel of Bukid for a fun surprise pick from our menu! Or kung gusto mo ng sure win, our bestsellers are always a good choice."
   },
   {
     id: "location",
     keywords: ["where", "location", "address", "near", "map", "saan", "lokasyon", "address"],
     response:
-      "You can find us at 123 Countryside Road, Morong, Rizal 1960, Philippines. 🗺️ Halika at bisitahin kami!",
+      "You can find us at Bukid Cafe, G. San Antonio Street,Morong, Rizal 1960 Philippines. 🗺️ Halika at bisitahin kami!",
   },
   {
     id: "wifi",
@@ -54,19 +120,13 @@ const intents = [
     id: "payments",
     keywords: ["pay", "payment", "gcash", "cash", "card", "credit", "mode", "bayad", "pera", "payment method"],
     response:
-      "We accept Cash, GCash, Debit/Credit Cards, and select e-wallets. 💳 Madali ang pagbabayad!",
+      "We accept Cash, GCash, e-wallets. 💳 Madali ang pagbabayad!",
   },
   {
     id: "delivery",
     keywords: ["deliver", "delivery", "grab", "foodpanda", "hatid", "padala"],
     response:
-      "We currently don’t offer delivery 🚫 pero feel free to visit us anytime!",
-  },
-  {
-    id: "beans",
-    keywords: ["beans", "coffee bean", "grounds", "grind", "beans", "butil", "kape", "grounds"],
-    response:
-      "Yes! We sell freshly roasted beans for home brewing. ☕ Pwede ring humingi ng grind sizes sa barista.",
+      "We deliver through the GRAB app! 🚚 Hanapin lang kami sa GrabFood para sa iyong convenience.",
   },
   {
     id: "pet",
@@ -84,23 +144,27 @@ const intents = [
     id: "contact",
     keywords: ["contact", "email", "phone", "number", "tawag", "text", "mail"],
     response:
-      "You can reach us at +63 917 123 4567 or hello@bukidcafe.ph 📞✉️",
+      "You can reach us at bukidcafe22@gmail.com ✉️",
   },
 ];
 
 const fallbackResponses = [
-  "Hmm, pasensya, I didn’t get that. Puwede mo bang i-rephrase? ☕",
-  "I might have missed that—try asking in another way! 🤖",
-  "Interesting! You can also call us at +63 917 123 4567 for details.",
+  "Medyo di ko nagets yun, Ka-bukid—pwedeng paulit hahaha! 😅 You can try typing things like:\n• 'Anong oras kayo bukas?'\n• 'Saan ang location ninyo?'\n• 'Pet-friendly ba ang café?'\n• 'Ano ang masarap sa menu?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!",
+  "Oops, nalito ako nang konti doon. 😅 Baka makatulong kung itype mo ulit gamit ang simpleng tanong gaya ng:\n• 'May parking ba?'\n• 'Pwede magpa-book ng event?'\n• 'Paano mag-order sa Grab?'\n• 'Anong payment methods ninyo?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!",
+  "Ay sorry, Ka-bukid! Di ko masyadong naintindihan. 😅 Subukan mong i-rephrase gamit ang mga tanong tulad ng:\n• 'May promo ba ngayon?'\n• 'Ano ang Wheel of Bukid?'\n• 'Pwede bang mag-aral sa café?'\n• 'Paano makontak ang Bukid Café?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!"
 ];
 
 const findIntent = (query: string): string => {
   const text = query.toLowerCase();
   for (const intent of intents) {
-    if (intent.keywords.some((kw) => text.includes(kw))) return intent.response;
+    if (intent.keywords.some((kw) => text.includes(kw))) {
+      return typeof intent.response === "function"
+        ? intent.response()
+        : intent.response;
+    }
   }
   return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
-};
+};  
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -165,14 +229,20 @@ const Chatbot = () => {
                   {msg.sender !== "user" && (
                     <img src="/robot.jpg" alt="bot" className="h-6 w-6 rounded-full mr-2" />
                   )}
-                  <div className={`max-w-[80%] rounded-lg p-3 text-sm ${
-                    msg.sender === "user"
-                      ? "bg-primary text-primary-foreground"
-                      : msg.sender === "typing"
-                      ? "bg-muted text-foreground italic opacity-70"
-                      : "bg-muted text-foreground"
-                  }`}>
-                    {msg.text}
+                  <div
+                    className={`max-w-[80%] rounded-lg p-3 text-sm ${
+                      msg.sender === "user"
+                        ? "bg-primary text-primary-foreground"
+                        : msg.sender === "typing"
+                        ? "bg-muted text-foreground italic opacity-70"
+                        : "bg-muted text-foreground"
+                    }`}
+                  >
+                    {msg.sender === "bot" ? (
+                      <div dangerouslySetInnerHTML={{ __html: msg.text }} />
+                    ) : (
+                      msg.text
+                    )}
                   </div>
                 </div>
               ))}
