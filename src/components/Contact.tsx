@@ -112,7 +112,7 @@ const Contact = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Bukid Café Location Map"
+                title="Bukid Cafe Location Map"
               />
             </div>
           </div>

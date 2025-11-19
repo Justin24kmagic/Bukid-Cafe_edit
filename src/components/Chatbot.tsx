@@ -46,7 +46,7 @@ const intents = [
     "kwento ng bukid", "origin", "story", "about bukid"
   ],
   response: `
-    Bukid Café is an alfresco coffee spot located in Morong, Rizal — cozy, breezy, and perfect for anyone who loves a relaxed probinsya vibe. 🌾  
+    Bukid Cafe is an alfresco coffee spot located in Morong, Rizal — cozy, breezy, and perfect for anyone who loves a relaxed probinsya vibe. 🌾  
     Gusto mo malaman kung paano nagsimula ang Bukid?  
     Click here to visit our <a href="#about" class="text-blue-500 underline">About Section</a>.
   `,
@@ -149,9 +149,9 @@ const intents = [
 ];
 
 const fallbackResponses = [
-  "Medyo di ko nagets yun, Ka-bukid—pwedeng paulit hahaha! 😅 You can try typing things like:\n• 'Anong oras kayo bukas?'\n• 'Saan ang location ninyo?'\n• 'Pet-friendly ba ang café?'\n• 'Ano ang masarap sa menu?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!",
+  "Medyo di ko nagets yun, Ka-bukid—pwedeng paulit hahaha! 😅 You can try typing things like:\n• 'Anong oras kayo bukas?'\n• 'Saan ang location ninyo?'\n• 'Pet-friendly ba ang cafe?'\n• 'Ano ang masarap sa menu?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!",
   "Oops, nalito ako nang konti doon. 😅 Baka makatulong kung itype mo ulit gamit ang simpleng tanong gaya ng:\n• 'May parking ba?'\n• 'Pwede magpa-book ng event?'\n• 'Paano mag-order sa Grab?'\n• 'Anong payment methods ninyo?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!",
-  "Ay sorry, Ka-bukid! Di ko masyadong naintindihan. 😅 Subukan mong i-rephrase gamit ang mga tanong tulad ng:\n• 'May promo ba ngayon?'\n• 'Ano ang Wheel of Bukid?'\n• 'Pwede bang mag-aral sa café?'\n• 'Paano makontak ang Bukid Café?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!"
+  "Ay sorry, Ka-bukid! Di ko masyadong naintindihan. 😅 Subukan mong i-rephrase gamit ang mga tanong tulad ng:\n• 'May promo ba ngayon?'\n• 'Ano ang Wheel of Bukid?'\n• 'Pwede bang mag-aral sa cafe?'\n• 'Paano makontak ang Bukid Cafe?'\nTry mo lang mga yan, Ka-bukid! Tatama din yan!"
 ];
 
 const findIntent = (query: string): string => {
@@ -169,7 +169,7 @@ const findIntent = (query: string): string => {
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { id: "1", text: "Hi! I'm your Bukid Café assistant. 👋 Ask me anything about the shop!", sender: "bot" },
+    { id: "1", text: "Hi! I'm your Bukid Cafe assistant. 👋 Ask me anything about the shop!", sender: "bot" },
   ]);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);

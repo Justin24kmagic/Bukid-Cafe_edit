@@ -107,7 +107,7 @@ const Events = () => {
             <div className="rounded-2xl overflow-hidden shadow-card mb-8">
               <img
                 src={coffeeCart}
-                alt="Bukid Café Mobile Coffee Cart"
+                alt="Bukid Cafe Mobile Coffee Cart"
                 className="w-full h-96 object-cover"
               />
             </div>

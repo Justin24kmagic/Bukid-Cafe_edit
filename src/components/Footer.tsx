@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Coffee className="h-8 w-8" />
-              <span className="font-display font-bold text-xl">Bukid Café</span>
+              <span className="font-display font-bold text-xl">Bukid Cafe</span>
             </div>
             <p className="text-sm opacity-90">
               Where nature meets your perfect cup. Experience countryside vibes in the heart of Morong, Rizal.
@@ -62,7 +62,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm opacity-90">
-            © {currentYear} Bukid Café. All rights reserved.
+            © {currentYear} Bukid Cafe. All rights reserved.
           </p>
           
           <div className="flex items-center gap-4">

@@ -40,13 +40,13 @@ const Navbar = () => {
             <div className="h-10 md:h-12 flex items-center overflow-hidden">
               <img
                 src={bukidLogo}
-                alt="Bukid Café"
+                alt="Bukid Cafe"
                 // h-full to match nav height, restricted visible width so logo stays visible; slightly stretched horizontally
                 className="h-full w-24 md:w-32 object-contain -ml-1"
                 style={{ transform: 'scaleX(1.12)' }}
               />
             </div>
-            <span className="sr-only">Bukid Café</span>
+            <span className="sr-only">Bukid Cafe</span>
           </button>
 
 

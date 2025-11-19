@@ -12,7 +12,7 @@ const Gallery = () => {
     { src: Img2, alt: "Beautiful latte art with a side of creamy chocolate cake" },
     { src: Img3, alt: "Mobile coffee cart at outdoor event" },
     { src: Img4, alt: "Customers enjoying coffee" },
-    { src: Img5, alt: "Lovely Staff at Bukid Café" },
+    { src: Img5, alt: "Lovely Staff at Bukid Cafe" },
     { src: Img6, alt: "Bukid Cafe cozy interior with natural lighting" },
    
    
