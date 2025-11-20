@@ -80,9 +80,10 @@ const SpinWheel = () => {
 
         <div className="bg-card rounded-2xl shadow-card p-8 md:p-12 animate-scale-in">
           <div className="flex flex-col items-center gap-8">
-            {/* Wheel Display */}
+          <div className="relative">
+            {/* Wheel (spinning element) */}
             <div
-              className={`relative transition-transform duration-2000 ${
+              className={`transition-transform duration-2000 ${
                 isSpinning ? "animate-spin-wheel" : ""
               }`}
             >
@@ -106,16 +107,18 @@ const SpinWheel = () => {
                 <div className="relative z-10 text-center">
                   <div className="text-6xl mb-2">↻</div>
                   <p className="text-primary-foreground font-display font-bold text-xl">
-                    {isSpinning ? "Spinning..." : "Tap to Spin"}
+                    {isSpinning ? "Spinning..." : "Click the Spin Button!"}
                   </p>
                 </div>
               </div>
-
-              {/* Pointer */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 text-4xl">
-                ▼
-              </div>
             </div>
+
+            {/* Pointer (fixed element, not spinning) */}
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-4xl z-20">
+              ▼
+            </div>
+          </div>
+
 
             {/* Category Checkboxes */}
             <div className="flex flex-col sm:flex-row gap-6 items-center">

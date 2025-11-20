@@ -84,10 +84,18 @@ const intents = [
     response:
       "Our shop is open Monday–Friday 11AM–8PM and Saturday–Sunday 7AM–9PM. ⏰ Bukas kami everyday para sa iyong kape fix!",
   },
+    {
+    id: "order",
+    keywords: [
+      "How to order", "order", "ordering", "place order", "paano mag-order", "mag-order", "order process"
+    ],
+    response:
+      "To place an order, simply visit our cafe in Morong, Rizal! 🏡 You can also order through the GRAB app for delivery. 🚚 Hanapin lang kami sa GrabFood para sa iyong convenience.",
+  },
   {
     id: "randomizer",
     keywords: [
-      "recommend", "suggest", "ano masarap", "anong masarap", "best seller", "order", "pick", "try", "wheel", "gusto", "reco", "recommendation", "ano masarap sa menu", "ano ang masarap", "ano ang pwede", "ano ang dapat tikman"
+      "recommend", "suggest", "ano masarap", "anong masarap", "best seller", "pick", "try", "wheel", "gusto", "reco", "recommendation", "ano masarap sa menu", "ano ang masarap", "ano ang pwede", "ano ang dapat tikman"
     ],
     response:
       "Looking for something new to try? 🎯 Spin the Wheel of Bukid for a fun surprise pick from our menu! Or kung gusto mo ng sure win, our bestsellers are always a good choice."
