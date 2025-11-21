@@ -17,8 +17,11 @@ const intents = [
       "menu", "food", "drink", "coffee", "milk", "frappe", "tea", 
       "pagkain", "inom", "inumin", "kape", "tsaa", "milk tea"
     ],
-    response:
-      "We serve the tastiest coffee, frappes, non-coffee drinks, and Filipino-inspired meals. ☕ Maaari mo ring tignan ang buong menu sa Menu page namin!",
+    response: `
+    We serve the tastiest coffee, non-coffee drinks, and Filipino-inspired meals. 
+    ☕ Maaari mo ring tignan ang buong menu sa <a href="#menu" class="text-blue-500 underline">Menu</a> 
+    section namin!
+    `,
   },
   
   {
@@ -33,7 +36,7 @@ const intents = [
         "Hi, Ka-bukid! Kung kape ka, ikaw ‘yung tipo na hindi ko kayang iwan—strong, warm, at laging comforting. Swipe mo na ang menu, baka ito na ang simula ng brewing love story natin.",
         "Hello, Ka-bukid! Kung iniwan ka ng ex mo, don’t worry—may kape kaming mas strong, mas loyal, at mas masarap. Tara, hanap tayo ng bagong ‘kapeng mahal’ sa menu.",
         "Hey there, Ka-bukid! Our coffee’s like a good relationship—hot, sweet, and never bitter (unless gusto mo ng black). Silipin mo ang menu, baka ma-in love ka sa first sip.",
-        "Well hello there, Ka-bukid! ☕ Ready to sip, snack, and smile? 😄 Whether it's a chill frappe, a bold brew, or a hearty Filipino bite, we've got your cravings covered. Tara, usap tayo sa menu!"
+        "Well hello there, Ka-bukid! ☕ Ready to sip, snack, and smile? 😄 Whether it's a bold brew, or a hearty Filipino bite, we've got your cravings covered. Tara, usap tayo sa menu!"
       ];
       const index = Math.floor(Math.random() * greetings.length);
       return greetings[index];
@@ -72,7 +75,7 @@ const intents = [
   ],
   response: `
     We’d love to hear from you! ⭐  
-    You can leave a review directly on our website — scroll down here:  
+    You can leave a review directly on our website — click here to go to the:  
     <a href="#reviews" class="text-blue-500 underline">Review Section</a>  
     or leave a Google Review by tapping here:  
     <a href="#contact" class="text-blue-500 underline">Google Reviews Link</a>.
@@ -145,8 +148,12 @@ const intents = [
   {
     id: "promo",
     keywords: ["promo", "promos", "discount", "deal", "bundle", "sale", "diskwento", "alok"],
-    response:
-      "We sometimes run promos and seasonal specials. 🎁 Follow our Facebook page for updates!",
+    response: `
+    We sometimes run promos and seasonal specials. 🎁 Follow our 
+    <a href="https://www.facebook.com/BukidCafe" target="_blank" class="text-blue-500 underline">
+      Facebook
+    </a> 
+    page for updates!`,
   },
   {
     id: "contact",

@@ -59,10 +59,19 @@ const Gallery = () => {
             Share Your Moments
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Tag us <span className="font-semibold text-secondary">@BukidCafe</span> to be featured in our social media galleries!
-            We love seeing you enjoy our coffee and cozy space. 📸☕
+            Tag us{" "}
+            <a
+              href="https://www.facebook.com/BukidCafe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-secondary underline"
+            >
+              @BukidCafe
+            </a>{" "}
+            to be featured in our social media galleries! We love seeing you enjoy our coffee and cozy space. 📸☕
           </p>
         </div>
+
       </div>
     </section>
   );
