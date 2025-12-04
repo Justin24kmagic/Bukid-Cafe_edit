@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# Welcome to Bukid Cafe Website
+Project info
 
-## Project info
-
-**URL**: https://lovable.dev/projects/22ae4118-df12-40d7-b7f2-f7d046adf827
+URL: https://bukidcafeph.com/
 
 ## How can I edit this code?
-
 There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/22ae4118-df12-40d7-b7f2-f7d046adf827) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Use your preferred IDE
+- If you want to work locally using your own IDE, you can clone this repo and push changes. The only requirement is having Node.js & npm installed - install with nvm
 
 Follow these steps:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+## Step 1: Clone the repository using your Git URL
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+## Step 2: Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Step 3: Install the necessary dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Step 4: Start the development server with live preview
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+# Step 5: Build for production
+npm run build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+- Edit a file directly in GitHub
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Navigate to the desired file(s)
+
+- Click the "Edit" button (pencil icon) at the top right
+
+- Make your changes and commit them
+
+## Upload changes to Hostinger
+
+- Log in to your Hostinger account
+
+- Navigate to the “File Manager” or use FTP
+
+- Replace files in the public_html directory with your updated build files, your website will automatically reflect the updates
 
 ## What technologies are used for this project?
 
 This project is built with:
 
 - Vite
-- TypeScript
+
 - React
-- shadcn-ui
+
+- TypeScript
+
 - Tailwind CSS
 
-## How can I deploy this project?
+- shadcn-ui
 
-Simply open [Lovable](https://lovable.dev/projects/22ae4118-df12-40d7-b7f2-f7d046adf827) and click on Share -> Publish.
+## How is the project deployed?
 
-## Can I connect a custom domain to my Lovable project?
+- This website is deployed on Hostinger. Updates are manually uploaded via File Manager or FTP.
 
-Yes, you can!
+## For new deployments:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Run npm run build to generate production files in the dist/ folder.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Upload the contents of the dist/ folder to Hostinger's public_html directory.
+
+- Access your website at https://bukidcafeph.com/
+
+## Can I connect a custom domain?
+
+- Yes! Your domain is already connected via Hostinger.
+
+- For custom domain updates or SSL settings, log in to Hostinger, go to Domains > Manage, and follow the instructions provided in the dashboard.
+
+## Status
+
+- ✅ Production Ready
+- ✅ Actively maintained
+- ✅ Open for improvements and feature expansion
+
+## Maintainer/Dev
+
+- Justin Bulot | Full-Stack Developer
+
+Portfolio:
+https://myportfoliojustinbulot.netlify.app/
